@@ -1,3 +1,40 @@
 body {
-  background: blanchedalmond;
+  background: white;
+  height:100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+}
+
+.container{
+  display: flex;
+  padding: 2rem;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* add color to squares and center text inside */
+.container > div{
+  flex-grow: 1;
+  border: 1px solid gray;
+  background-color: lightgray;
+  border-radius: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.b{
+  flex-grow: 5;
+}
+/* add media selector */
+@media (min-width:600px) {
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  div.a{
+    flex: 1 1 100%;
+  }
 }

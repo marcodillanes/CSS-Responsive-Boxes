@@ -1,3 +1,103 @@
+/* main background color */
 body {
-  background: papayawhip;
+  background: whitesmoke;
+}
+/* main border for all content */
+* {
+  border: 3px solid black;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: black;
+  border-style:double;
+  background-color: darkolivegreen;
+  font-size: 1em;
+  justify-content: center;
+  text-align: center;
+}
+/* i tried "justify" "textalign" and "alignitems like in media one but none seem to get text centered in this example*/
+.noodle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 2;
+  align-items: center;
+  min-height: 70vh;
+  background-color:darkgray;
+  border-style: solid;
+  border-color: black;
+  font-size: 1.5em;
+  justify-content: center;
+}
+/* flex, sizing, color of aside, noodle */
+aside, .noodle  {
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+  background-color:darkgrey;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+  background-color: lightgrey;
+}
+
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+  background-color:whitesmoke;
+}
+/* flexgrow for main */
+main {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
+}
+/* flex and color/sizing of footer */
+footer {
+  background-color: lightslategray;
+  font-size: 1.5em;
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+  border-style: solid;
+  border-color: black;
+}
+/* flex sizing and color of header */
+header {
+  font-size: 1.5em;
+  background-color:whitesmoke;
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+  border-style: solid;
+  border-color: black;
+}
+/* media css */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+    max-height: 10vh;
+  }
+  .noodle {
+    justify-content: stretch;
+    flex-basis: 70%;
+    min-height:  80vh;
+  }
+  footer {
+    margin: .3em;
+    flex-grow: 3;
+    min-height:  80vh;
+  }
 }

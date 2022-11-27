@@ -1,3 +1,65 @@
+/* for background and body color try using vscode color selector instead */
 body {
-  background: peachpuff;
+  background: rgb(188, 64, 226);
+}
+
+* {
+  border: 3px solid rgb(11, 4, 2) ;
+}
+/* background for boxes try different colors */
+.a, .b, .c, .d, .e, .f, .g, .h {
+  background: plum;
+  text-align: center;
+  font-size: 1em;
+}
+
+.container {
+  justify-content: space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  min-height: 90vh;
+
+}
+
+.wrapper {
+  justify-content: space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+  min-height: 33vh;
+
+}
+/* a-g i was able to get pretty close to what i want but i cant seem to get h */
+.a {
+  min-width: 90vw;
+  min-height: 15vh;
+}
+
+.h {
+  background-color: lightslategray;
+  min-width: 50vw;
+  min-height: 50vh;
+  border-style: solid;
+  border-color: black;
+}
+
+.b, .c, .d, .e, .f, .g {
+  min-height: 18vh;
+  min-width: 30vw;
+}
+
+@media (min-width: 600px) {
+  .a {
+    min-height: 25vh;
+  }
+  .b, .c, .d, .e, .f, .g {
+    min-width: 24vw;
+    min-height: 26vh;
+    
+  }
+  .h {
+    min-width: 22vw;
+  }
+
 }
